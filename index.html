@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Header -->
+            <div class="heading">
+                <h1>To-Do List</h1>
+                <img src="images/icon.png" alt="loading">
+            </div>
+            <!-- Inputbox and Button -->
+            <div class="task-input">
+                <input type="text" placeholder="Enter Task">
+                <button class="add-task">Add</button>
+            </div>
+            <!-- List of Tasks -->
+            <div class="task-list">
+                <ul>
+                    <!-- <li class="unchecked">First
+                        <p></p>
+                    </li>
+                    <li class="unchecked">second
+                        <p></p>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const task = document.querySelector('.task-input input');
+    const addbtn = document.querySelector('.add-task');
+    const tasklist = document.querySelector('.task-list ul');
+    const rmv = document.querySelector('.task-list p');
+
+    // To add New Task using button
+    addbtn.addEventListener('click',()=>{
+        const value = task.value;
+        if(value != ""){
+            const li = document.createElement('li');
+            li.classList.add('unchecked');
+
+            const para = document.createElement('p');
+            // para.innerHTML = "hell";
+
+            li.innerHTML = value;
+            li.append(para);
+            tasklist.appendChild(li)
+
+        }
+        task.value = "";
+    })
+
+    // To add new task using enter button
+    task.addEventListener('keydown',()=>{
+        if(event.key === "Enter"){
+            const value = task.value;
+            if(value != ""){
+                const li = document.createElement('li');
+                li.classList.add('unchecked');
+
+                const para = document.createElement('p');
+                // para.innerHTML = 'hell'
+
+                li.innerHTML = value;
+                li.append(para);
+                tasklist.appendChild(li)
+
+            }
+            task.value = "";
+        }
+    })
+
+
+    // To toggle checked and unchecked
+    tasklist.addEventListener('click',()=>{
+        const li = event.target;
+        // console.log(li);
+        
+        if(li.tagName == "LI"){
+            if(li.classList.contains('unchecked')){
+                li.classList.add('checked');
+                li.classList.remove('unchecked');
+
+                const para = li.querySelector('p');
+                if(para) para.style.display = "block";
+            }
+            else if(li.classList.contains('checked')){
+                li.classList.add('unchecked');
+                li.classList.remove('checked');
+
+                const para = li.querySelector('p');
+                if(para) para.style.display = "none";
+            }
+        }
+       
+    })
+
+    // to dele the list item
+    tasklist.addEventListener('click',()=>{
+        const target = event.target;
+
+        if(target.tagName === "P"){
+            // console.log(target);
+            const parent = target.parentElement;
+            parent.remove();
+        }
+    })
+
+</script>
+</html>
