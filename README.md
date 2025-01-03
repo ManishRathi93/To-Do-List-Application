@@ -24,7 +24,6 @@ This project is a simple and functional **To-Do List application** built using *
 - **No Data Persistence**: Tasks are not stored permanently (e.g., local storage or database integration is missing).
 
 #### **Future Improvements**
-1. **Make Responsive**: Enhance the layout using media queries to optimize for mobile devices and smaller screens.
-2. **Add Persistence**: Implement local storage to save tasks even after refreshing the page.
-3. **Enhanced Features**: Add categories, task priorities, and deadlines for better task management.
-4. **Accessibility**: Improve keyboard navigation and add ARIA attributes for better usability.
+1. **Add Persistence**: Implement local storage to save tasks even after refreshing the page.
+2. **Enhanced Features**: Add categories, task priorities, and deadlines for better task management.
+3. **Accessibility**: Improve keyboard navigation and add ARIA attributes for better usability.
