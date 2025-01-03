@@ -27,3 +27,11 @@ This project is a simple and functional **To-Do List application** built using *
 1. **Add Persistence**: Implement local storage to save tasks even after refreshing the page.
 2. **Enhanced Features**: Add categories, task priorities, and deadlines for better task management.
 3. **Accessibility**: Improve keyboard navigation and add ARIA attributes for better usability.
+
+
+##UI Design:
+![UI](https://github.com/user-attachments/assets/d15411b2-9ba8-4f01-9c19-9c58250450b0)
+
+![Incomple tasks](https://github.com/user-attachments/assets/b537ab67-8fc8-44da-8bba-514205480ec8)
+
+![Completed task](https://github.com/user-attachments/assets/f7db9d51-0dbb-4207-8b8e-56a4ef98ae87)
