@@ -20,7 +20,6 @@ This project is a simple and functional **To-Do List application** built using *
 - Smooth toggling between task states with dynamic styles.
 
 #### **Limitations**
-- **Responsiveness**: The current design works best on medium to large screens. On smaller devices, the layout may not scale properly, leading to potential usability challenges.
 - **No Data Persistence**: Tasks are not stored permanently (e.g., local storage or database integration is missing).
 
 #### **Future Improvements**
